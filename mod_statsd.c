@@ -382,7 +382,7 @@ static int request_hook(request_rec *r)
                         r->pool,
                         cfg->prefix,
                         cfg->aggregate_stat, // no dot between key & method because key
-                        r->method,           // will always end in a dot.
+                        verb,                // will always end in a dot.
                         ".",
                         apr_psprintf(r->pool, "%d", r->status),
                         cfg->suffix, // will always end in a dot.
